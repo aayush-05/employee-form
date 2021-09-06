@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    background-color: #f1f1f17e;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-outer-container {
+    background-color: #ffffff;
+    border-radius: 0.6rem;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 1rem 1.5rem;
+    width: 100%;
+}
+
+.form-outer-container
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.field-container {
+    font-size: 1rem;
+    flex: 0 0 80%;
+    margin: 1rem 0;
+    padding-bottom: 1.1rem;
+    position: relative;
+}
+
+.field-container:last-child {
+    display: flex;
+}
+
+.field-container
+.text-field-label {
+    background-color: #ffffff;
+    color: #086972;
+    font-weight: 500;
+    left: 4%;
+    padding: 0;
+    position: absolute;
+    top: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.field-container
+.disabled-field-label,
+.field-container
+.disabled-field-label
+.mandatory-symbol {
+    background-color: transparent;
+    color: #ced4da;
+}
+
+.mandatory-symbol {
+    color: #ce3333;
+}
+
+.field-error {
+    color: #ce3333;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.field-container
+input[type="text"],
+.field-container
+textarea {
+    border: 0.1rem solid #ced4da;
+    border-radius: 0.2rem;
+    margin: 0 auto;
+    padding: 0.8rem 0.2rem 0.8rem 1rem;
+    transition: all 0.1s ease;
+    width: 100%;
+}
+
+.field-container:focus-within
+.text-field-label,
+.field-container
+.value-filled {
+    font-size: 0.8rem;
+    padding: 0 0.2rem;
+    top: -0.35rem;
+}
+
+.field-container
+input[type="text"]:focus,
+.field-container
+textarea:focus {
+    border: 0.15rem solid #086972;
+    outline: 0;
+    padding-top: 0.7rem;
+}
+
+.field-container
+h6 {
+    color: #086972;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    margin-right: 0.8rem;
+}
+
+.field-container
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ced4da;
+    border-radius: 50%;
+    height: 1.2rem;
+    transition: border, box-shadow 0.3s ease;
+    vertical-align: text-bottom;
+    width: 1.2rem;
+}
+
+.field-container
+.radio-button-label:first-of-type {
+    margin-right: 0.8rem;
+}
+
+.field-container
+input[type="radio"]:focus {
+    outline: 1px solid #ced4da;
+}
+
+.field-container
+input[type="radio"]:checked {
+    background-color: #086972;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 0.1rem #086972;
+}
+
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ced4da;
+    border-radius: 0.2rem;
+    height: 1.3rem;
+    margin-bottom: -0.05rem;
+    margin-left: 0;
+    position: relative;
+    transition: border, box-shadow 0.3s ease;
+    vertical-align: text-bottom;
+    width: 1.3rem;
+}
+
+input[type="checkbox"]:before {
+    background-color: #086972;
+    border-bottom: 0.2rem solid #ffffff;
+    border-right: 0.2rem solid #ffffff;
+    content: "";
+    display: none;
+    height: 0.6rem;
+    left: 0.4rem;
+    position: relative;
+    top: 0.1rem;
+    transform: rotate(45deg);
+    width: 0.3rem;
+}
+
+input[type="checkbox"]:focus {
+    outline: 1px solid #ced4da;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #086972;
+    border: 0;
+}
+
+input[type="checkbox"]:checked:before {
+    display: inline-block;
+}
+
+.reset-link {
+    background-color: #ffffff;
+    border: 0;
+    color: #ce3333;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: -0.2rem;
+    padding: 0 0.2rem;
+    text-decoration: underline;
+}
+
+.reset-link:focus {
+    outline: 0;
+}
+
+.reset-link:focus-visible {
+    outline: 1px solid #ced4da;
+}
+
+.submit-button {
+    background-color: #086972;
+    border: 0;
+    border-radius: 0.3rem;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-left: auto;
+    padding: 0.6rem 1.5rem;
+}
+
+.submit-button:focus {
+    outline: 0;
+}
+
+.submit-button:focus-visible {
+    box-shadow: 0 0 0 0.2rem #0869723f;
+}
+
+@media (max-width: 550px) {
+    .field-container {
+        padding-bottom: 2rem;
+    }
+
+    .field-container
+    h6 {
+        display: block;
+        padding-bottom: 0.6rem;
+    }
+}

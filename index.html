@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Employee Form</title>
+</head>
+<body>
+    <div class="form-outer-container">
+        <form id="employee-form">
+            <div class="field-container">
+                <label for="first-name" class="text-field-label">
+                    First Name
+                    <span class="mandatory-symbol">*</span>
+                </label>
+                <input type="text" id="first-name" name="first-name" autofocus/>
+                <small class="field-error" id="first-name-error"></small>
+            </div>
+            <div class="field-container">
+                <label for="last-name"  class="text-field-label">
+                    Last Name
+                    <span class="mandatory-symbol">*</span>
+                </label>
+                <input type="text" id="last-name" name="last-name"/>
+                <small class="field-error" id="last-name-error"></small>
+            </div>
+            <div class="field-container">
+                <h6>
+                    Gender:
+                    <span class="mandatory-symbol">*</span>
+                </h6>
+                <input type="radio" id="gender-male" name="gender"/>
+                <label for="gender-male"  class="radio-button-label">Male</label>
+                <input type="radio" id="gender-female" name="gender"/>
+                <label for="gender-female" class="radio-button-label">Female</label>
+                <small class="field-error" id="gender-error"></small>
+            </div>
+            <div class="field-container marital-status-container">
+                <h6>
+                    Marital Status:
+                    <span class="mandatory-symbol">*</span>
+                </h6>
+                <input type="radio" id="status-married" name="marital-status" checked/>
+                <label for="status-married"  class="radio-button-label">Married</label>
+                <input type="radio" id="status-unmarried" name="marital-status" />
+                <label for="status-unmarried" class="radio-button-label">Unmarried</label>
+            </div>
+            <div class="field-container">
+                <label for="spouse-name" class="text-field-label">
+                    Spouse Name
+                    <span class="mandatory-symbol">*</span>
+                </label>
+                <input type="text" id="spouse-name" name="spouse-name"/>
+                <small class="field-error" id="spouse-name-error"></small>
+            </div>
+            <div class="field-container">
+                <label for="other-details" class="text-field-label">Other Details</label>
+                <textarea rows="3" id="other-details" name="other-details"></textarea>
+            </div>
+            <div class="field-container">
+                <input type="checkbox" id="tnc-checkbox" name="accept-tnc" aria-label="Accept TnC"/>
+                <label for="accept-tnc" class="">I accept Terms and Conditions</label>
+                <small class="field-error" id="tnc-error"></small>
+            </div>
+            <div class="field-container">
+                <input type="reset" class="reset-link" aria-label="Reset">
+                <input type="submit" class="submit-button" aria-label="Submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
