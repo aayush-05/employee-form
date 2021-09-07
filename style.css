@@ -228,6 +228,7 @@ input[type="checkbox"]:checked:before {
 
 @media (max-width: 550px) {
     .field-container {
+        flex: 0 0 100%;
         padding-bottom: 2rem;
     }
 
