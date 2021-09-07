@@ -95,7 +95,11 @@ textarea {
 .field-container
 input[type="text"]:focus,
 .field-container
-textarea:focus {
+textarea:focus,
+.field-container
+input[type="text"]:hover:not(:disabled),
+.field-container
+textarea:hover {
     border: 0.15rem solid #086972;
     outline: 0;
     padding-top: 0.7rem;
@@ -109,6 +113,7 @@ h6 {
     font-weight: 500;
     margin: 0;
     margin-right: 0.8rem;
+    min-width: 124px;
 }
 
 .field-container
@@ -125,8 +130,14 @@ input[type="radio"] {
 }
 
 .field-container
-.radio-button-label:first-of-type {
-    margin-right: 0.8rem;
+input[type="radio"]:hover {
+    border: 2px solid #086972;
+}
+
+.field-container
+.radio-button-label {
+    display: inline-block;
+    min-width: 61px;
 }
 
 .field-container
@@ -159,6 +170,10 @@ input[type="checkbox"] {
     transition: border, box-shadow 0.3s ease;
     vertical-align: text-bottom;
     width: 1.3rem;
+}
+
+input[type="checkbox"]:hover {
+    border: 2px solid #086972;
 }
 
 input[type="checkbox"]:before {
@@ -216,6 +231,11 @@ input[type="checkbox"]:checked:before {
     font-size: 1rem;
     margin-left: auto;
     padding: 0.6rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-0.3rem);
 }
 
 .submit-button:focus {
